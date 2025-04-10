@@ -1,0 +1,55 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur"/>
+      <feFlood flood-color="#FFB6C1" flood-opacity="0.8" result="glowColor"/> <feComposite in="glowColor" in2="blur" operator="in" result="coloredGlow"/>
+      <feMerge>
+        <feMergeNode in="coloredGlow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <radialGradient id="petalGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#FFF0F5; stop-opacity:1" /> <stop offset="60%" style="stop-color:#FFC0CB; stop-opacity:1" /> <stop offset="100%" style="stop-color:#DB7093; stop-opacity:1" /> </radialGradient>
+
+    <path id="petalShape" d="M 250 450 C 200 350, 200 150, 250 50 C 300 150, 300 350, 250 450 Z" />
+
+  </defs>
+
+  <g filter="url(#softGlow)">
+
+    <g id="layer1" fill="url(#petalGradient)" opacity="0.9">
+      <use href="#petalShape" transform="rotate(0 250 250)"/>
+      <use href="#petalShape" transform="rotate(45 250 250)"/>
+      <use href="#petalShape" transform="rotate(90 250 250)"/>
+      <use href="#petalShape" transform="rotate(135 250 250)"/>
+      <use href="#petalShape" transform="rotate(180 250 250)"/>
+      <use href="#petalShape" transform="rotate(225 250 250)"/>
+      <use href="#petalShape" transform="rotate(270 250 250)"/>
+      <use href="#petalShape" transform="rotate(315 250 250)"/>
+    </g>
+
+    <g id="layer2" fill="#FF69B4" opacity="0.7" transform="rotate(22.5 250 250) scale(0.75)">
+      <use href="#petalShape" transform="rotate(0 250 250)"/>
+      <use href="#petalShape" transform="rotate(45 250 250)"/>
+      <use href="#petalShape" transform="rotate(90 250 250)"/>
+      <use href="#petalShape" transform="rotate(135 250 250)"/>
+      <use href="#petalShape" transform="rotate(180 250 250)"/>
+      <use href="#petalShape" transform="rotate(225 250 250)"/>
+      <use href="#petalShape" transform="rotate(270 250 250)"/>
+      <use href="#petalShape" transform="rotate(315 250 250)"/>
+    </g>
+
+     <g id="layer3" fill="#FFF0F5" opacity="0.9" transform="scale(0.3)">
+        <use href="#petalShape" transform="rotate(0 250 250)"/>
+        <use href="#petalShape" transform="rotate(60 250 250)"/>
+        <use href="#petalShape" transform="rotate(120 250 250)"/>
+        <use href="#petalShape" transform="rotate(180 250 250)"/>
+        <use href="#petalShape" transform="rotate(240 250 250)"/>
+        <use href="#petalShape" transform="rotate(300 250 250)"/>
+     </g>
+
+  </g>
+
+</svg>
